@@ -40,6 +40,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E635EC6A288B663E003F4CB2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E635EC68288B63D4003F4CB2 /* BarcodeScannerViewModel.swift */,
+				E635F98E288A63E1000A05C1 /* BarcodeScannerView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E635EC6B288B6651003F4CB2 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				E65EC3CE288B2BC500E0026A /* ScannerViewController.swift */,
+				E6BBD7C0288B40AC0002EF92 /* ScannerView.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		E635EC6C288B6674003F4CB2 /* uimodels */ = {
+			isa = PBXGroup;
+			children = (
+				E635EC66288B6347003F4CB2 /* Alert.swift */,
+			);
+			path = uimodels;
+			sourceTree = "<group>";
+		};
 		E635F980288A63E1000A05C1 = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +85,10 @@
 		E635F98B288A63E1000A05C1 /* BarcodeScannerSwiftUi */ = {
 			isa = PBXGroup;
 			children = (
-				E635EC68288B63D4003F4CB2 /* BarcodeScannerViewModel.swift */,
+				E635EC6C288B6674003F4CB2 /* uimodels */,
+				E635EC6B288B6651003F4CB2 /* viewcontrollers */,
+				E635EC6A288B663E003F4CB2 /* Screens */,
 				E635F98C288A63E1000A05C1 /* BarcodeScannerSwiftUiApp.swift */,
-				E635F98E288A63E1000A05C1 /* BarcodeScannerView.swift */,
-				E65EC3CE288B2BC500E0026A /* ScannerViewController.swift */,
-				E6BBD7C0288B40AC0002EF92 /* ScannerView.swift */,
-				E635EC66288B6347003F4CB2 /* Alert.swift */,
 				E635F990288A63E3000A05C1 /* Assets.xcassets */,
 				E635F992288A63E3000A05C1 /* Preview Content */,
 			);
