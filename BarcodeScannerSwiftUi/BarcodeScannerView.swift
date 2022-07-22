@@ -27,14 +27,14 @@ struct BarcodeScannerView: View {
                 .font(.title)
                 .padding()
                 
-                Text(viewModel.scannedCode.isEmpty ? "Not scanned yet" : "🤖 \(viewModel.scannedCode) 🤖")
+                Text(viewModel.statusText)
                     .bold()
                     .font(.largeTitle)
-                    .foregroundColor(viewModel.scannedCode.isEmpty ? .red : .green)
+                    .foregroundColor(viewModel.isScannedEmpty ? .red : .green)
                     .padding()
                 
             }
-            .navigationTitle("👓Barcode Scanner")
+            .navigationTitle("👓 Barcode Scanner")
             .alert(item: $viewModel.alertItem) { alertItem in
                 Alert(title: alertItem.title,
                       message: alertItem.message,
