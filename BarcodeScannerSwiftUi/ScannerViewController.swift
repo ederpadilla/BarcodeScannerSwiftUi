@@ -20,7 +20,7 @@ protocol ScannerVCDelegate: AnyObject {
 }
 
 
-final class ScannerVC: UIViewController {
+final class ScannerViewCcontroller: UIViewController {
     
     let captureSession = AVCaptureSession()
     var previewLayer: AVCaptureVideoPreviewLayer?
@@ -39,10 +39,7 @@ final class ScannerVC: UIViewController {
         setupCaptureSession()
     }
     
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
+    override func viewDidAppear(_ animated: Bool) {
         guard let previewLayer = previewLayer else {
             scannerDelegate?.didSurface(error: .invalidDeviceInput)
             return
@@ -93,7 +90,7 @@ final class ScannerVC: UIViewController {
 }
 
 
-extension ScannerVC: AVCaptureMetadataOutputObjectsDelegate {
+extension ScannerViewCcontroller: AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
@@ -112,6 +109,7 @@ extension ScannerVC: AVCaptureMetadataOutputObjectsDelegate {
             return
         }
         
+        //captureSession.stopRunning()
         scannerDelegate?.didFind(barcode: barcode)
     }
 }

@@ -12,6 +12,7 @@
 		E635F991288A63E3000A05C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E635F990288A63E3000A05C1 /* Assets.xcassets */; };
 		E635F994288A63E3000A05C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E635F993288A63E3000A05C1 /* Preview Assets.xcassets */; };
 		E65EC3CF288B2BC500E0026A /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EC3CE288B2BC500E0026A /* ScannerViewController.swift */; };
+		E6BBD7C1288B40AC0002EF92 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BBD7C0288B40AC0002EF92 /* ScannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		E635F990288A63E3000A05C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E635F993288A63E3000A05C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E65EC3CE288B2BC500E0026A /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		E6BBD7C0288B40AC0002EF92 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				E65EC3CE288B2BC500E0026A /* ScannerViewController.swift */,
 				E635F990288A63E3000A05C1 /* Assets.xcassets */,
 				E635F992288A63E3000A05C1 /* Preview Content */,
+				E6BBD7C0288B40AC0002EF92 /* ScannerView.swift */,
 			);
 			path = BarcodeScannerSwiftUi;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E635F98F288A63E1000A05C1 /* BarcodeScannerView.swift in Sources */,
+				E6BBD7C1288B40AC0002EF92 /* ScannerView.swift in Sources */,
 				E65EC3CF288B2BC500E0026A /* ScannerViewController.swift in Sources */,
 				E635F98D288A63E1000A05C1 /* BarcodeScannerSwiftUiApp.swift in Sources */,
 			);
@@ -271,7 +275,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BarcodeScannerSwiftUi/Preview Content\"";
-				DEVELOPMENT_TEAM = 5DQ8MXBPU4;
+				DEVELOPMENT_TEAM = T2QF3USGP2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use camera to use the scanner";
@@ -301,7 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BarcodeScannerSwiftUi/Preview Content\"";
-				DEVELOPMENT_TEAM = 5DQ8MXBPU4;
+				DEVELOPMENT_TEAM = T2QF3USGP2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to use camera to use the scanner";
