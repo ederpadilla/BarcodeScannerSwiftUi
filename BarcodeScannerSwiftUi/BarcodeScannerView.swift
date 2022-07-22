@@ -7,31 +7,33 @@
 
 import SwiftUI
 
-struct AlertItem {
-    let title: String
-    let message: String
+struct AlertItem: Identifiable {
+    let id = UUID()
+    let title: Text
+    let message: Text
     let dismissButton: Alert.Button
 }
 
 struct AlertContext {
-    static let invalidDeciveInput = AlertItem(title: "Invalid Device Input",
-                                              message: "Sorry theres not camera bro🥲",
+    static let invalidDeciveInput = AlertItem(title: Text("Invalid Device Input"),
+                                              message: Text("Sorry theres not camera bro🥲"),
                                               dismissButton: .default(Text("Ok")))
     
-    static let invalidScannedType = AlertItem(title: "Invalid Scanned Input",
-                                              message: "The value is not supported is not EAN-8 or EAN-13👓",
+    static let invalidScannedType = AlertItem(title: Text("Invalid Scanned Input"),
+                                              message: Text("The value is not supported is not EAN-8 or EAN-13👓"),
                                               dismissButton: .default(Text("Ok")))
 }
 
 struct BarcodeScannerView: View {
     
     @State private var scannedCode = ""
-    @State private var isShowingAlert = false
+    @State private var alertItem: AlertItem?
     
     var body: some View {
         NavigationView {
             VStack {
-                ScannerView(scannedCode: $scannedCode)
+                ScannerView(scannedCode: $scannedCode,
+                            alertItem: $alertItem)
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity,
                            maxHeight: 300)
@@ -51,6 +53,11 @@ struct BarcodeScannerView: View {
                 
             }
             .navigationTitle("👓Barcode Scanner")
+            .alert(item: $alertItem) { alertItem in
+                Alert(title: alertItem.title,
+                      message: alertItem.message,
+                      dismissButton: alertItem.dismissButton)
+            }
         }
     }
 }
