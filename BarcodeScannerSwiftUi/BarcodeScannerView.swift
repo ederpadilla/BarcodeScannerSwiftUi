@@ -7,6 +7,22 @@
 
 import SwiftUI
 
+struct AlertItem {
+    let title: String
+    let message: String
+    let dismissButton: Alert.Button
+}
+
+struct AlertContext {
+    static let invalidDeciveInput = AlertItem(title: "Invalid Device Input",
+                                              message: "Sorry theres not camera bro🥲",
+                                              dismissButton: .default(Text("Ok")))
+    
+    static let invalidScannedType = AlertItem(title: "Invalid Scanned Input",
+                                              message: "The value is not supported is not EAN-8 or EAN-13👓",
+                                              dismissButton: .default(Text("Ok")))
+}
+
 struct BarcodeScannerView: View {
     
     @State private var scannedCode = ""
@@ -33,19 +49,8 @@ struct BarcodeScannerView: View {
                     .foregroundColor(scannedCode.isEmpty ? .red : .green)
                     .padding()
                 
-                Button {
-                    isShowingAlert = true
-                } label: {
-                    Text("Show alert")
-                }
-                
             }
             .navigationTitle("👓Barcode Scanner")
-            .alert(isPresented: $isShowingAlert) {
-                Alert(title: Text("Hello mf"),
-                      message: Text("Hello mf message"),
-                      dismissButton: .default(Text("Goodby mf")))
-            }
         }
     }
 }
